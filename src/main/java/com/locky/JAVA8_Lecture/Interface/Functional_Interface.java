@@ -1,8 +1,8 @@
-package com.locky.java8to11;
+package com.locky.JAVA8_Lecture.Interface;
 
 import java.util.function.*;
 
-public class Foo {
+public class Functional_Interface {
 
     public static void main(String[] args) {
 

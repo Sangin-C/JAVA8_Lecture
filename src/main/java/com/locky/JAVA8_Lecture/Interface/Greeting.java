@@ -1,4 +1,4 @@
-package com.locky.java8to11;
+package com.locky.JAVA8_Lecture.Interface;
 
 public class Greeting {
 
