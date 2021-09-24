@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Spliterator;
 import java.util.stream.Collectors;
 
-public class App {
+public class Java8API {
     public static void main(String[] args) {
         List<String> name = new ArrayList<>();
         name.add("lokcy");
