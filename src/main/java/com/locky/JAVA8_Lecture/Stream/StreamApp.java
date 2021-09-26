@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-public class Stream {
+public class StreamApp {
     public static void main(String[] args) {
         List<String> names = new ArrayList<>();
         names.add("lokcy");

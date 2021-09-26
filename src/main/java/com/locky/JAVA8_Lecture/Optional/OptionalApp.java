@@ -6,7 +6,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Optional {
+public class OptionalApp {
 
     public static void main(String[] args) {
         List<OnlineClass> springClasses = new ArrayList<>();
