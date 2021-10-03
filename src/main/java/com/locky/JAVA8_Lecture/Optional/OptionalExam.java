@@ -72,7 +72,7 @@ public class OptionalExam {
         System.out.println(onlineClassFilter.isEmpty());
         System.out.println("======================================");
 
-        //.filter()는 값이 있다는 가정하에 쓰는것이다. 값이 없으면 아무것도 리턴해주지 않는다.
+        //.map()은 값을 변환할때 쓰인다.
         System.out.println("Optional에 들어있는 값 변환하기");
         Optional<Integer> integer = optional.map(oc -> {
             return oc.getId();

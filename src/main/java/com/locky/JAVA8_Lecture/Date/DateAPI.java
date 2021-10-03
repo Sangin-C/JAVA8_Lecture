@@ -15,6 +15,7 @@ public class DateAPI {
         System.out.println(instant);    //기준시 UTC, GMT
         System.out.println("=============================================");
 
+        //내가 있느 지역 나타내기
         System.out.println("현재 내가 있는 지역 나타내기");
         ZoneId zone = ZoneId.systemDefault();
         System.out.println(zone);
@@ -50,7 +51,7 @@ public class DateAPI {
         System.out.println(birthday);
         System.out.println("=============================================");
 
-        //특전 존의 시간 나타내기
+        //특정 존의 시간 나타내기
         System.out.println("특정 존의 시간");
         ZonedDateTime nowInKorea = ZonedDateTime.now(ZoneId.of("Asia/Seoul"));
         System.out.println(nowInKorea);
