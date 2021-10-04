@@ -9,6 +9,8 @@ public class ExecutorsApp {
         //Executors를 사용해 Thread를 생성 방법
         ExecutorService executorSingleService = Executors.newSingleThreadExecutor();
         executorSingleService.execute(() -> System.out.println("Thread : " + Thread.currentThread().getName()));
+        //submit도 동일하다.
+        executorSingleService.submit(() -> System.out.println("Thread : " + Thread.currentThread().getName()));
 
         //ExecutorService는 Thread와 달리 어떤 작업을 시작하고 다음 작업이 들어올때까지 계속 대기를한다
         //.shutdown() 메서드를 통해 종료시켜줘야한다.
