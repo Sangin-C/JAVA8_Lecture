@@ -14,13 +14,12 @@ public class CompletableFutureApp {
         ExecutorService executorService = Executors.newFixedThreadPool(4);
         Future<String> future = executorService.submit(() -> "future");
 
-
         // .get()을 하기 전까지는 위의 결과값들을 사용할 수 없다.
         // future로 받은 결과값들은 모두 .get() 호출 이후에 작업을 해야한다.
         future.get();
 
 
-        // CompletableFuture을 사용하면 Executors를 명시하지않고 그냥 바로 사용하능하다.
+        // CompletableFuture을 사용하면 Executors를 명시하지않고 그냥 바로 사용가능하다.
         // .get()메서드를 호출해야하는건 똑같다.
         CompletableFuture<String> completableFuture = new CompletableFuture<>();
         completableFuture.complete("lokcy");
@@ -28,11 +27,11 @@ public class CompletableFutureApp {
 
 
         // 리턴 값이 없을경우
-        CompletableFuture<Void> voidCompletableFuture = CompletableFuture.runAsync(() -> {
+        CompletableFuture<Void> runAsync = CompletableFuture.runAsync(() -> {
             System.out.println("Hello" + Thread.currentThread().getName());
         });
         // 위의 코드는 Future만 정의한것이기 때문에 .get()이나 .join()을 사용해야 실행된다.
-        voidCompletableFuture.get();
+        runAsync.get();
 
 
         // 리턴 값이 있는경우
@@ -168,7 +167,7 @@ public class CompletableFutureApp {
             }
             return result;
         });
-        exceoptionally.get();
+        handle.get();
 
 
     }
