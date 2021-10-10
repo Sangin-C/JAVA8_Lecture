@@ -105,12 +105,7 @@ public class CompletableFutureApp {
         CompletableFuture<String> thenCompose = hello.thenCompose(s -> getWorld(s));
         thenCompose.get();
 
-        private static CompletableFuture<String> getWorld(String message) {
-            return CompletableFuture.supplyAsync(() -> {
-                System.out.println("World " + Thread.currentThread().getName());
-                return "World";
-            });
-        }
+
 
         // 두 개의 작업이 의존성을 가지고 있지 않을 경우 각각의 작업이 따로 진행되도 되는경우
         CompletableFuture<String> thenCombine = hello.thenCombine(world, (h, w) -> {
@@ -168,8 +163,13 @@ public class CompletableFutureApp {
             return result;
         });
         handle.get();
+    }
 
-
+    private static CompletableFuture<String> getWorld(String message) {
+        return CompletableFuture.supplyAsync(() -> {
+            System.out.println("World " + Thread.currentThread().getName());
+            return "World";
+        });
     }
 
 
